@@ -92,6 +92,10 @@ If you have custom key/value you want to add to your client configuration,
 please uses the `sensu_settings` variable, that will generate the
 `settings.json` file.
 
+## Gem dependencies
+
+Some plugins depend on installed gems. Required gems can be installed via Sensu's embedded `gem` binary using the `sensu_gems` variable. The variable expects a list of hashes each with a gem `name` and `version` string key.
+
 ## Role Variables
 
 ### Behaviour variables
@@ -115,6 +119,8 @@ please uses the `sensu_settings` variable, that will generate the
 `sensu_cert_dir`|String|Directory to look for the certificates|`files`
 `sensu_cert_file_name`|String|Filename of the client certificate|`sensu_client_cert.pem`
 `sensu_key_file_name`|String|Filename of the client key|`sensu_client_key.pem`
+`sensu_embedded_path`|String|Path to Sensu's embedded directory|`/opt/sensu/embedded/bin`
+`sensu_gems`|Complex type|A variable representing gems to install via Sensu's embedded `gem` binary|`[]`
 
 ### Client variables
 
