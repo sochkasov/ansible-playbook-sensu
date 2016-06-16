@@ -3,6 +3,9 @@
 
 sensu_file_base: ''
 
+sensu_common_repository_key: http//sensu.global.ssl.fastly.net/apt/pubkey.gpg
+
+
 # Variable to control the installation
 sensu_install_client: true
 sensu_install_server: true
