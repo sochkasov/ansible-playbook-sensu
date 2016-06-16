@@ -3,7 +3,7 @@
 
 sensu_file_base: ''
 
-sensu_common_repository_key: http//sensu.global.ssl.fastly.net/apt/pubkey.gpg
+sensu_common_repository_key: http://sensu.global.ssl.fastly.net/apt/pubkey.gpg
 
 
 # Variable to control the installation
