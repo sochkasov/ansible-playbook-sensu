@@ -1,6 +1,6 @@
 ---
 - name: add the official Sensu repository's key
-  apt_key: url=http://repos.sensuapp.org/apt/pubkey.gpg state=present
+  apt_key: url=http://sensu.global.ssl.fastly.net/apt/pubkey.gpg state=present
 
 - name: add the official Sensu repository
   copy:
@@ -13,8 +13,8 @@
   apt: update_cache=yes
   when: aptrepo.changed
 
-- name: install sensu
-  apt: name=sensu state=present
+- name: install or upgrade sensu
+  apt: name=sensu state=latest
 
 - name: set which Ruby to use
   lineinfile:
